@@ -26,7 +26,7 @@ const Response = (props) => {
     }
   }
   return <div className={s.wrapper}>
-    {props.weather ? <Fade> <div className={s.container}>
+    {props.weather ? <Fade cascade> <div className={s.container}>
 
           <div className={s.row}>
             <img src={buildings} alt='' className={s.icon}/>
