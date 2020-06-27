@@ -10,17 +10,17 @@ const App = (props) => {
 
   return <div className="App">
 
-    <LightSpeed left cascade>  <div className='wrapper'>
-      {!start &&  <Header/> }
+    <div className='wrapper'>
+      {!start && <LightSpeed left> <Header/> </LightSpeed>}
       <div className='body'>
-        {!start ?  <div className='start-screen'><p>Хотите узнать погоду?<br/> Скорее нажимайте кнопку</p>
+        {!start ?  <LightSpeed left><div className='start-screen'><p>Хотите узнать погоду?<br/> Скорее нажимайте кнопку</p>
           <button onClick={() => setStart(true)}>Click me</button>
-        </div> : <Fade> <Body {...props} /></Fade>
+        </div> </LightSpeed>: <Fade> <Body {...props} /></Fade>
         }
 
       </div>
     </div>
-    </LightSpeed>
+
   </div>
 
 }
