@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react'
+import './App.css'
+import {connect} from 'react-redux'
+import Header from './component/Header/Header'
+import Body from './component/Body/Body'
+import {LightSpeed, Fade} from 'react-reveal';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App = (props) => {
+  const [start, setStart] = useState(false)
+
+  return <div className="App">
+
+    <div className='wrapper'>
+      {!start && <LightSpeed left> <Header/> </LightSpeed>}
+      <div className='body'>
+        {!start ?  <LightSpeed left><div className='start-screen'><p>Хотите узнать погоду?<br/> Скорее нажимайте кнопку</p>
+          <button onClick={() => setStart(true)}>Click me</button>
+        </div> </LightSpeed>: <Fade> <Body {...props} /></Fade>
+        }
+
+      </div>
     </div>
-  );
+
+  </div>
+
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    weather: state.weather,
+  }
+}
+let AppContainer =
+    connect(mapStateToProps, {})(App)
+
+export default AppContainer

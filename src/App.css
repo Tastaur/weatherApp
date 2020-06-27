@@ -1,38 +1,34 @@
-.App {
+.App * {
+  font-family: "Andika";
+
+}
+
+.wrapper{
+  width: 500px;
+  margin: 0 auto;
   text-align: center;
+  height: 95%;
+  background-color: ivory;
+  padding: 25px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+  height: 600px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header h2{
+  margin: 50px 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.start-screen p{
+  font-size: 18px;
 }
-
-.App-link {
-  color: #61dafb;
+.start-screen button{
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  background-color: inherit;
+  cursor: pointer;
+  outline: none;
+  font-weight: bolder;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.start-screen button:hover{
+  background-color: lemonchiffon;
 }
