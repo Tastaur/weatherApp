@@ -29,7 +29,6 @@ const ReduxForm = reduxForm({
 const FormInput = (props) => {
   const handleSubmit = (data) => {
 
-    props.getInfo('')
     props.getInfo(data.city)
   }
   return <div>
