@@ -4,15 +4,27 @@
 }
 
 .wrapper{
-  width: 500px;
+  width: 50%;
   margin: 0 auto;
   text-align: center;
-  height: 95%;
+  height: 100%;
   background-color: ivory;
   padding: 25px;
 }
+@media (max-width: 700px) {
+  .wrapper{
+    width: 100%;
+    padding: 0;
+    padding-top: 20px;
+    height: 100%;
+  }
+  .App{
+    height: 100vh;
+    background-color: ivory;
+  }
+}
 .App{
-  height: 675px;
+  height: 100vh;
 }
 .header h2{
   margin: 50px 0;
