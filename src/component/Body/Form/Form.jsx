@@ -13,10 +13,15 @@ const RequestForm = ({handleSubmit}) => {
   return (
       <form onSubmit={handleSubmit} className={s.container}>
         <div>
-          <Field className={s.input} component={Input}  validate={[required, minLength2]} name={'city'} placeholder={`Название города`}/>
+          <Field className={s.input}
+                 component={Input}
+                 validate={[required, minLength2]}
+                 name={'city'}
+                 placeholder={`Название города`}
+          />
         </div>
         <div>
-          <button >Найти</button>
+          <button>Найти</button>
         </div>
       </form>
   )

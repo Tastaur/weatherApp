@@ -29,7 +29,7 @@ const weatherReducer = (state = initialState, action) => {
     }
     case CLEAR: {
       return {
-        state: initialState
+        state: initialState,
       }
     }
     default:
@@ -41,15 +41,13 @@ export const catchError = (error) => ({type: CATCH_ERROR, error})
 export const clear = () => ({type: CLEAR})
 
 export const getInfo = (city) => async (dispatch) => {
-    dispatch(clear())
+  dispatch(clear())
   try {
     let data = await weatherAPI.getInfo(city)
     dispatch(setInfo(data))
-  }catch (data) {
+  } catch (data) {
     dispatch(catchError(data.response.data.message))
   }
-
-
 
 
 }
