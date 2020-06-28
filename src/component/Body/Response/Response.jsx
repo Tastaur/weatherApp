@@ -2,6 +2,7 @@ import React from 'react'
 import buildings from './buildings.png'
 import temp from './temperature.png'
 import wind from './wind.png'
+import arrow from './up-arrow.png'
 import s from './Response.module.css'
 import {Fade} from 'react-reveal'
 
@@ -45,7 +46,7 @@ const Response = (props) => {
 
           <div className={s.row}>
             <img src={wind} className={s.icon} alt=''/>
-            <p>{windDerection(props.weather.wind.deg)} {props.weather.wind.speed} м\с</p>
+            <p> <img src={arrow} style={{transform: `rotate(${props.weather.wind.deg}deg)`, height: '16px'}}/> {windDerection(props.weather.wind.deg)}  {props.weather.wind.speed} м\с</p>
           </div>
 
         </div>
