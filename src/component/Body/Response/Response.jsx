@@ -2,7 +2,7 @@ import React from 'react'
 import buildings from './buildings.png'
 import temp from './temperature.png'
 import wind from './wind.png'
-import arrow from './up-arrow.png'
+import arrow from './down-arrow.png'
 import s from './Response.module.css'
 import {Fade} from 'react-reveal'
 
